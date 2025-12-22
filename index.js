@@ -1,25 +1,10 @@
-const mongoose = require("mongoose");
+//  const { Person } = require("./person");
+const dotenv = require("dotenv");
+const connectToDatabase = require("./src/databse/connect");
 
-const connectToDatabase = async () => {
-  try {
-    await mongoose.connect(
-      "https://cloud.mongodb.com/v2/694970108005a44268f7e92b#/overview?connectCluster=NodeJs"
-    );
-    console.log("Conectado ao MongoDB!");
-  } catch (error) {
-    console.error("Erro ao conectar ao MongoDB:", error);
-  }
-};
+dotenv.config();
 
-module.exports = connectToDatabase;
-
-// const { Person } = require("./person");
-// const dotenv = require("dotenv");
-// const connectToDatabase = require("./src/databse/connect");
-
-// dotenv.config();
-
-// connectToDatabase();
+connectToDatabase();
 
 // require("./modules/path");
 // require("./modules/fs");
