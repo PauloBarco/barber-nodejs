@@ -1,5 +1,5 @@
 const express = require("express");
-const UserModel = require(`../src/models/user.model`);
+const UserModel = require(`../src/models/user.models`);
 const app = express();
 
 app.get("/home", (req, res) => {
